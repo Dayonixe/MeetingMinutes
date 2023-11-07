@@ -7,6 +7,8 @@ import openai
 from pydub import AudioSegment
 from docx import Document
 
+model_gpt = "gpt-4-1106-preview"
+
 def split_audio(file_path):
     audio = AudioSegment.from_mp3(file_path)
     max_size = 25 * 1024 * 1024  # 25 MB
@@ -29,7 +31,7 @@ def transcribe_audio(audio_chunks):
 
 def abstract_summary_extraction(transcription):
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model=model_gpt,
         temperature=0,
         messages=[
             {
@@ -46,7 +48,7 @@ def abstract_summary_extraction(transcription):
 
 def key_points_extraction(transcription):
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model=model_gpt,
         temperature=0,
         messages=[
             {
@@ -63,7 +65,7 @@ def key_points_extraction(transcription):
 
 def action_item_extraction(transcription):
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model=model_gpt,
         temperature=0,
         messages=[
             {
