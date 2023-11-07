@@ -8,7 +8,7 @@ Team : Théo Pirouelle
 
 ---
 
-## Préambule
+## Preamble
 
 To use the script, you'll need an [OpenAI API key](https://platform.openai.com/account/api-keys) for Whisper and GPT-4.
 You will therefore need to modify the `openai.api_key` variable for the script to work properly.
@@ -30,7 +30,7 @@ pip3 install python-docx
 pip3 install pydub
 ```
 
-## Utilisation
+## Usage
 
 ```bash
 python3 main.py file_name.mp3
@@ -40,8 +40,9 @@ python3 main.py file_name.mp3
 > The file must be a `.mp3`.
 
 When you run the script, it will ask you whether you want to run the complete script or just the transcript.
-
 The complete script includes transcript, summary, key points and action points.
+
+You can change the model used in the code by modifying the `model_gpt` variable. You can find a list of the different GPT models supported on the [OpenAI site](https://platform.openai.com/docs/guides/function-calling), along with the methods of use for API calls.
 
 
 If you get the error that the `mp3` file is too heavy, feel free to cut it to make it lighter with the following commands:
@@ -58,10 +59,15 @@ ffmpeg -i test.mp3 -ss 00:00:30 -to 00:10:00 -c copy output.mp3  # Ici de 30 sec
 
 Here are the performances I've seen in use:
 
-| Recording time | Treatment duration | Cost |
-| --- | --- | --- |
-| 1min | 40sec |  |
-| 3min | 2min |  |
-| 10min | 3min30 | 0.11$ |
-| 15min |  | 0.49$ |
-| 27min17 | 4min15 | 0.79$ |
+| Model | Recording time | Treatment duration | Cost |
+| --- | --- | --- | --- |
+| gpt-4 | 1min | 40sec |  |
+| gpt-4 | 3min | 2min |  |
+| gpt-4 | 10min | 3min30 | 0.11$ |
+| gpt-4-1106-preview | 10min | 1min20 | 0.05$ |
+| gpt-4 | 15min |  | 0.49$ |
+| gpt-4 | 27min17 | 4min15 | 0.79$ |
+
+You can find costs for the various models (including Whisper and GPT-4) on the [OpenAI website](https://openai.com/pricing).
+
+You can also find all your consumption for the current month, as well as your payment history, on the [Usage page](https://platform.openai.com/usage).
