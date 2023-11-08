@@ -62,10 +62,11 @@ Here are the performances I've seen in use:
 | Model | Recording time | Treatment duration | Cost |
 | --- | --- | --- | --- |
 | gpt-4 | 1min | 40sec |  |
-| gpt-4 | 3min | 2min |  |
+| gpt-4 | 3min | 2min | 0.07$ |
 | gpt-4 | 10min | 3min30 | 0.11$ |
-| gpt-4-1106-preview | 10min | 1min20 | 0.05$ |
+| gpt-4-1106-preview | 10min | 1min20 | 0.17$ |
 | gpt-4 | 15min |  | 0.49$ |
+| gpt-4-1106-preview | 17min32 | 2min13 |  |
 | gpt-4 | 27min17 | 4min15 | 0.79$ |
 
 You can find costs for the various models (including Whisper and GPT-4) on the [OpenAI website](https://openai.com/pricing).
