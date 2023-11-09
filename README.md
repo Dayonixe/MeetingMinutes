@@ -48,11 +48,11 @@ You can change the model used in the code by modifying the `model_gpt` variable.
 If you get the error that the `mp3` file is too heavy, feel free to cut it to make it lighter with the following commands:
 
 ```bash
-# Installation de l'outil
+# Tool installation
 sudo apt install ffmpeg
 
-# Utilisation de ffmpeg
-ffmpeg -i test.mp3 -ss 00:00:30 -to 00:10:00 -c copy output.mp3  # Ici de 30 secondes à 10 minutes
+# Using ffmpeg
+ffmpeg -i test.mp3 -ss 00:00:30 -to 00:10:00 -c copy output.mp3  # Here from 30 seconds to 10 minutes
 ```
 
 ## Performance
