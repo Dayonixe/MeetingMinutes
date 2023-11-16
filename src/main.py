@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 import datetime
 import tempfile
 import math
@@ -119,6 +120,9 @@ if __name__ == '__main__':
         else:
             print("Option non valide, veuillez saisir 'F' ou 'T'.")
 
+    # Start timer
+    start = time.time()
+
     # Split audio into chunks
     audio_chunks = split_audio(audio_file_path)
 
@@ -144,3 +148,6 @@ if __name__ == '__main__':
     formatted_date = now.strftime("%Y-%m-%d_%H-%M-%S")
     filename = f"meeting_minutes_{formatted_date}.docx"
     save_as_docx(minutes, filename)
+
+    # End timer
+    print(f'Runtime: {time.strftime("%H:%M:%S", time.gmtime(time.time() - start))}')
