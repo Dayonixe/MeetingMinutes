@@ -15,7 +15,7 @@ You will therefore need to modify the `openai.api_key` variable for the script t
 
 The script on the repository is configured in French; it's easy to modify the script to adapt it to another language (just translate the few instructions given to GPT).
 
-> **Warning**<br>
+> [!WARNING]
 > To use the script, you need to be connected to the Internet so that it can call the OpenAI API.
 
 You will also need to install the necessary :
@@ -36,7 +36,7 @@ pip3 install pydub
 python3 main.py file_name.mp3
 ```
 
-> **Warning**<br>
+> [!WARNING]
 > The file must be a `.mp3`.
 
 When you run the script, it will ask you whether you want to run the complete script or just the transcript.
@@ -68,6 +68,7 @@ Here are the performances I've seen in use:
 | gpt-4 | 15min |  | 0.49$ |
 | gpt-4-1106-preview | 16min37 | 3min20 | 0.27$ |
 | gpt-4-1106-preview | 17min32 | 2min13 | 0.26$ |
+| gpt-4-1106-preview | 18min35 | 3min28 |  |
 | gpt-4 | 27min17 | 4min15 | 0.79$ |
 
 You can find costs for the various models (including Whisper and GPT-4) on the [OpenAI website](https://openai.com/pricing).
